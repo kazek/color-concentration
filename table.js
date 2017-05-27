@@ -38,7 +38,7 @@ class Table {
   }
 
   onTileClick(tile) {
-    let shown = this.getShownTiles();
+    let shown = this.getShownTiles()
     if(shown.length > 1) {
       shown.forEach(t => t.hide())
     } else if(shown.length == 1) {

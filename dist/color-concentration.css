@@ -36,4 +36,5 @@
   background-color: #aaa;
   margin: 2px;
   transition: background-color ease 0.3s;
+  cursor: pointer;
 }
