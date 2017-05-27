@@ -18,8 +18,12 @@ class Tile {
     return this.shown && !this.matched
   }
 
-  setMatched(){
+  setMatched() {
     this.matched = true
+  }
+
+  isMatched() {
+    return this.matched
   }
 
   show() {
