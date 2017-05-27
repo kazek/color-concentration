@@ -1,0 +1,14 @@
+.cc-table {
+  margin: auto;
+  max-width: 324px;
+}
+
+.cc-tile {
+  float: left;
+  height: 50px;
+  width: 50px;
+  box-sizing: border-box;
+  background-color: #aaa;
+  margin: 2px;
+  transition: background-color ease 0.3s;
+}
