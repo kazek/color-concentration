@@ -18,10 +18,10 @@ class Table {
   createTiles() {
     this.tiles = []
     for(let i = 0; i < this.numberOfTiles; i++) {
-      this.tiles.push(new Tile(i%(this.numberOfTiles/2)))
+      this.tiles.push(new Tile(i % (this.numberOfTiles / 2)))
     }
     this.shuffleTiles()
-    this.tiles.forEach(t => {
+    this.tiles.forEach((t) => {
       t.createElement()
       this.element.append(t.element)
       t.element.addEventListener('click', () => this.onTileClick(t))
@@ -48,7 +48,7 @@ class Table {
       }
     }
     tile.show()
-    this.clickCount++
+    this.clickCount += 1
     if(this.getNotMatchedTiles().length == 0) {
       this.showResultBoard()
     }

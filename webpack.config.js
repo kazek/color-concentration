@@ -1,26 +1,29 @@
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
   entry: './color-concentration.js',
   output: {
-     path: './dist',
+     path: __dirname + '/dist',
      filename: 'color-concentration.js'
   },
   module: {
-     loaders: [{
+     rules: [
+       {
          test: /\.js$/,
          exclude: /node_modules/,
-         loader: 'babel-loader'
-     }]
+         use: 'babel-loader'
+       }
+     ]
   },
   plugins: [
-      new webpack.optimize.UglifyJsPlugin({
-          compress: {
-              warnings: false,
-          },
-          output: {
-              comments: false,
-          },
-      }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      output: {
+        comments: false,
+      },
+    })
   ]
  }
